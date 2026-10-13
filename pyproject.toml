@@ -1,0 +1,38 @@
+[project]
+name = "planificador_yaan"
+version = "0.1.0"
+description = "PLANIFICADOR YAAN"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "YAAN", email = "franconv14817096@gmail.com" }
+]
+dependencies = [
+    "flet>=0.25.0"
+]
+
+[dependency-groups]
+dev = [
+    "flet-cli>=0.25.0",
+    "flet-desktop>=0.25.0",
+    "flet-web>=0.25.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.flet]
+org = "com.noelfranco"
+name = "planificador_yaan"
+product_name = "PLANIFICADOR YAAN"
+company = "yaan"
+copyright = "Copyright (C) 2023-2026 by YAAN"
+
+[tool.flet.app]
+path = "src"
+
+[tool.flet.android]
+# No necesitas extract_packages porque solo usas json/os/datetime
+# Si en el futuro agregas matplotlib/sklearn, añádelos aquí:
+# extract_packages = ["matplotlib", "sklearn"]
